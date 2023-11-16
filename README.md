@@ -65,4 +65,4 @@ To modify the logo in the application, make changes in the `src/layout/Header.js
 
 ### Copyright and License
 
-Copyright © 2022 Code with Gee. Code released under the MIT license.
+Copyright © 2023 Code with Gee. Code released under the MIT license.
