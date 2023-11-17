@@ -24,8 +24,7 @@ const Sidebar = ({ open, onClose }) => {
     const theme = useTheme();
 
     return (
-        <>
-            <Drawer
+        <Drawer
                 anchor='left'
                 onClose={() => onClose()}
                 open={open}
@@ -89,7 +88,6 @@ const Sidebar = ({ open, onClose }) => {
                     </Box>
                 </Box>
             </Drawer>
-        </>
     );
 };
 

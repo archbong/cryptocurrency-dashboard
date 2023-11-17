@@ -14,89 +14,87 @@ const Footer = () => {
     const theme = useTheme();
 
     return (
-        <>
+        <Box
+            backgroundColor={theme.palette.background.default}
+            paddingTop={1}
+            paddingBottom={1}
+            // sticky footer - see four values below
+            position='fixed'
+            bottom=''
+            left=''
+            width=''
+        >
+            <Divider />
             <Box
                 backgroundColor={theme.palette.background.default}
-                paddingTop={1}
-                paddingBottom={1}
-                // sticky footer - see four values below
-                position='fixed'
-                bottom=''
-                left=''
-                width=''
+                position='relative'
+                padding={theme.spacing(0.25)}
             >
-                <Divider />
-                <Box
-                    backgroundColor={theme.palette.background.default}
-                    position='relative'
-                    padding={theme.spacing(0.25)}
-                >
-                    <Grid container spacing={0}>
-                        <Hidden mdDown>
-                            <Grid container item xs={12} md={4}>
-                                <List
-                                    sx={{
-                                        display: 'flex',
-                                        flexDirection: 'row',
-                                        padding: 0,
-                                    }}
-                                >
-                                    <ListItemButton component='a' href='#'>
-                                        <ListItemText
-                                            primary={
-                                                <Typography
-                                                    variant='body2'
-                                                    color={theme.palette.text.secondary}
-                                                >
-                                                    Privacy Policy
-                                                </Typography>
-                                            }
-                                        />
-                                    </ListItemButton>
-                                    <ListItemButton component='a' href='#'>
-                                        <ListItemText
-                                            primary={
-                                                <Typography
-                                                    variant='body2'
-                                                    color={theme.palette.text.secondary}
-                                                >
-                                                    Term of Use
-                                                </Typography>
-                                            }
-                                        />
-                                    </ListItemButton>
-                                </List>
-                            </Grid>
-                        </Hidden>
-                        <Grid container item xs={12} md={4} justifyContent='center'>
-                            <List>
-                                <ListItemButton>
+                <Grid container spacing={0}>
+                    <Hidden mdDown>
+                        <Grid container item xs={12} md={4}>
+                            <List
+                                sx={{
+                                    display: 'flex',
+                                    flexDirection: 'row',
+                                    padding: 0,
+                                }}
+                            >
+                                <ListItemButton component='a' href='#'>
                                     <ListItemText
                                         primary={
                                             <Typography
                                                 variant='body2'
                                                 color={theme.palette.text.secondary}
                                             >
-                                                Data provided by{' '}
-                                                <Link
-                                                    href='https://www.coingecko.com/'
-                                                    alt='CoinGecko'
-                                                    target='_blank'
-                                                    rel='norefferer'
-                                                    color={theme.palette.text.secondary}
-                                                >
-                                                    CoinGecko
-                                                </Link>
+                                                Privacy Policy
+                                            </Typography>
+                                        }
+                                    />
+                                </ListItemButton>
+                                <ListItemButton component='a' href='#'>
+                                    <ListItemText
+                                        primary={
+                                            <Typography
+                                                variant='body2'
+                                                color={theme.palette.text.secondary}
+                                            >
+                                                Term of Use
                                             </Typography>
                                         }
                                     />
                                 </ListItemButton>
                             </List>
                         </Grid>
+                    </Hidden>
+                    <Grid container item xs={12} md={4} justifyContent='center'>
+                        <List>
+                            <ListItemButton>
+                                <ListItemText
+                                    primary={
+                                        <Typography
+                                            variant='body2'
+                                            color={theme.palette.text.secondary}
+                                        >
+                                            Data provided by{' '}
+                                            <Link
+                                                href='https://www.coingecko.com/'
+                                                alt='CoinGecko'
+                                                target='_blank'
+                                                rel='norefferer'
+                                                color={theme.palette.text.secondary}
+                                            >
+                                                CoinGecko
+                                            </Link>
+                                        </Typography>
+                                    }
+                                />
+                            </ListItemButton>
+                        </List>
                     </Grid>
-                </Box>
+                </Grid>
             </Box>
-        </>
+        </Box>
     );
 };
 
