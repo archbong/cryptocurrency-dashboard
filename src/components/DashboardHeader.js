@@ -9,8 +9,7 @@ const DashboardHeader = () => {
     const theme = useTheme();
 
     return(
-        <>
-          <Grid
+        <Grid
             item
             alignItems='center'
             justifyContent='space-between'
@@ -52,7 +51,6 @@ const DashboardHeader = () => {
                 </Box>
             </Grid>
           </Grid>
-        </>
     );
 };
 
