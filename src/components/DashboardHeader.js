@@ -24,7 +24,7 @@ const DashboardHeader = () => {
                 </Typography>
                 <Box sx={{ pt: 2 }}>
                     <Typography color={theme.palette.text.secondary} variant='h5'>
-                        <span>{'Today:'}</span>{' '}
+                        <span>{'Welcome:'}</span>{' '}
                         <span
                           style={{
                             color:
