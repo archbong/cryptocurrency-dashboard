@@ -12,6 +12,9 @@ import Exchanges from "../components/statistics/Exchanges";
 import Categories from "../components/statistics/Categories";
 import MarketIndexes from "../components/statistics/MarketIndexes";
 
+import Spacer from '../components/Spacer'
+import CoinMarkets from "../components/tables/CoinMarkets";
+
 const Dashboard = () => {
     const theme = useTheme();
 
@@ -52,9 +55,15 @@ const Dashboard = () => {
                                 <MarketIndexes />
                             </ErrorBoundary>
                         </Grid>
+                        <Grid item xs={12}>
+                            <ErrorBoundary>
+                                <CoinMarkets />
+                            </ErrorBoundary> 
+                        </Grid>
                     </Grid>
                 </Container>
             </Box>
+            <Spacer />
         </ErrorBoundary>
     );
 };

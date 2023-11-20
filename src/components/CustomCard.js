@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types'
 import Avatar from '@mui/material/Avatar';
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
@@ -46,5 +47,12 @@ const CustomCard = ({ text, value, color, icon }) => {
         </Card>
     );
 };
+
+CustomCard.propTypes = {
+    text: PropTypes.string.isRequired,
+    value: PropTypes.number.isRequired,
+    color: PropTypes.string.isRequired,
+    icon: PropTypes.string.isRequired
+}
 
 export default CustomCard;

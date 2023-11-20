@@ -8,11 +8,11 @@ import Zoom from '@mui/material/Zoom';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import useScrollTrigger from '@mui/material/useScrollTrigger';
 import { useTheme } from '@mui/material/styles';
-import ErrorBoundary from '../components/ErrorBoundary';
 
 import Header from './Header';
 import Footer from './Footer';
 import Sidebar from './Sidebar';
+import ErrorBoundary from '../components/ErrorBoundary'
 
 const Layout = ({ children }) => {
   const theme = useTheme();
@@ -50,7 +50,7 @@ const Layout = ({ children }) => {
   return (
     <ErrorBoundary>
       <Box
-        id="page-top"
+        id='page-top'
         sx={{
           backgroundColor: theme.palette.background.default,
           height: '100%',
@@ -63,34 +63,35 @@ const Layout = ({ children }) => {
         <ErrorBoundary>
           <Sidebar onClose={handleSidebarClose} open={open} />
         </ErrorBoundary>
-        <Box>{children}</Box>
+        <ErrorBoundary>
+          <Box>{children}</Box>
+        </ErrorBoundary>
         <ErrorBoundary>
           <Footer />
+
         </ErrorBoundary>
         <NoSsr>
           <Zoom in={trigger}>
-            <ErrorBoundary>
-              <Box
-                onClick={() => scrollTo('page-top')}
-                role="presentation"
-                sx={{ position: 'fixed', bottom: 24, right: 32 }}
+            <Box
+              onClick={() => scrollTo('page-top')}
+              role='presentation'
+              sx={{ position: 'fixed', bottom: 24, right: 32 }}
+            >
+              <Fab
+                color='primary'
+                size='small'
+                aria-label='scroll back to top'
+                sx={{
+                  '&:hover': {
+                    backgroundColor: 'transparent',
+                    color: theme.palette.primary.main,
+                    border: '2px solid' + theme.palette.primary.main,
+                  },
+                }}
               >
-                <Fab
-                  color="primary"
-                  size="small"
-                  aria-label="scroll back to top"
-                  sx={{
-                    '&:hover': {
-                      backgroundColor: 'transparent',
-                      color: theme.palette.primary.main,
-                      border: '2px solid' + theme.palette.primary.main,
-                    },
-                  }}
-                >
-                  <KeyboardArrowUpIcon />
-                </Fab>
-              </Box>
-            </ErrorBoundary>
+                <KeyboardArrowUpIcon />
+              </Fab>
+            </Box>
           </Zoom>
         </NoSsr>
       </Box>

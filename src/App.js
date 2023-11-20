@@ -36,8 +36,7 @@ const App = () => {
     }, []);
 
     return (
-        <>
-            <HelmetProvider>
+        <HelmetProvider>
                 <Helmet
                     titleTemplate='%s | Cryptocurrency dashboard'
                     defaultTitle='cryptocurrency dashboard' />
@@ -54,7 +53,6 @@ const App = () => {
                     </ThemeProvider>
                 </ColorModeContext.Provider>
             </HelmetProvider>
-        </>
     );
 };
 
