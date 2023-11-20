@@ -58,12 +58,14 @@ const Dashboard = () => {
                         <Grid item xs={12}>
                             <ErrorBoundary>
                                 <CoinMarkets />
-                            </ErrorBoundary> 
+                            </ErrorBoundary>
                         </Grid>
                     </Grid>
                 </Container>
             </Box>
-            <Spacer />
+            <ErrorBoundary>
+              <Spacer />
+            </ErrorBoundary>
         </ErrorBoundary>
     );
 };
