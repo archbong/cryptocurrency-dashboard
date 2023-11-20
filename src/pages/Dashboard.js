@@ -42,16 +42,22 @@ const Dashboard = () => {
                                 <Categories />
                             </ErrorBoundary>
                         </Grid>
+
+                        {/* Exchanges section  */}
                         <Grid item lg={3} sm={6} xl={3} xs={12}>
                             <ErrorBoundary>
                                 <Exchanges />
                             </ErrorBoundary>
                         </Grid>
+
+                        {/* AssetPlatforms section  */}
+
                         <Grid item lg={3} sm={6} xl={3} xs={12}>
                             <ErrorBoundary>
                                 <AssetPlatforms />
                             </ErrorBoundary>
                         </Grid>
+                        {/* Market Indexes section  */}
                         <Grid item lg={3} sm={6} xl={3} xs={12}>
                             <ErrorBoundary>
                                 <MarketIndexes />
