@@ -14,6 +14,8 @@ import MarketIndexes from "../components/statistics/MarketIndexes";
 
 import Spacer from '../components/Spacer'
 import CoinMarkets from "../components/tables/CoinMarkets";
+import AreaCharts from "../components/charts/AreaCharts";
+import BarChart from "../components/charts/BarCharts";
 
 const Dashboard = () => {
     const theme = useTheme();
@@ -55,9 +57,25 @@ const Dashboard = () => {
                                 <MarketIndexes />
                             </ErrorBoundary>
                         </Grid>
+
+                        {/* Coin Market section  */}
                         <Grid item xs={12}>
                             <ErrorBoundary>
                                 <CoinMarkets />
+                            </ErrorBoundary>
+                        </Grid>
+                        
+                        {/* Area Chart section  */}
+                        <Grid item xs={12}>
+                            <ErrorBoundary>
+                                <AreaCharts />
+                            </ErrorBoundary>
+                        </Grid>
+
+                        {/* Bar Chart section  */}
+                        <Grid item xs={12}>
+                            <ErrorBoundary>
+                                <BarChart />
                             </ErrorBoundary>
                         </Grid>
                     </Grid>
