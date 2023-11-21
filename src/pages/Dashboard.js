@@ -16,6 +16,8 @@ import Spacer from '../components/Spacer'
 import CoinMarkets from "../components/tables/CoinMarkets";
 import AreaCharts from "../components/charts/AreaCharts";
 import BarChart from "../components/charts/BarCharts";
+import DoughnutChart from "../components/charts/DoughnutCharts";
+import LineChart from "../components/charts/LineCharts";
 
 const Dashboard = () => {
     const theme = useTheme();
@@ -72,16 +74,29 @@ const Dashboard = () => {
                         </Grid>
                         
                         {/* Area Chart section  */}
-                        <Grid item xs={12}>
+                        <Grid item lg={6} xs={12}>
                             <ErrorBoundary>
                                 <AreaCharts />
                             </ErrorBoundary>
                         </Grid>
 
                         {/* Bar Chart section  */}
-                        <Grid item xs={12}>
+                        <Grid item lg={6} xs={12}>
                             <ErrorBoundary>
                                 <BarChart />
+                            </ErrorBoundary>
+                        </Grid>
+                        {/* Doughnut Chart section  */}
+                        <Grid item lg={6} xs={12}>
+                            <ErrorBoundary>
+                                <DoughnutChart />
+                            </ErrorBoundary>
+                        </Grid>
+
+                        {/* Line Chart section  */}
+                        <Grid item lg={6} xs={12}>
+                            <ErrorBoundary>
+                                <LineChart />
                             </ErrorBoundary>
                         </Grid>
                     </Grid>

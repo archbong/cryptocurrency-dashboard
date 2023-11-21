@@ -1,9 +1,13 @@
+import { Box, Card, CardContent, CardHeader } from '@mui/material';
 import React, { Component } from 'react';
 
 class ErrorBoundary extends Component {
   constructor(props) {
     super(props);
-    this.state = { hasError: false };
+    this.state = { 
+      hasError: false,
+      error: null 
+    };
   }
 
   static getDerivedStateFromError(error) {
@@ -18,12 +22,19 @@ class ErrorBoundary extends Component {
 
   render() {
     if (this.state.hasError) {
-      // You can render any custom fallback UI
       return (
-        <div>
-          <h2>Something went wrong.</h2>
-          <p>Please refresh the page or try again later.</p>
-        </div>
+        <Card>
+          <CardHeader
+            title='Error Information'
+            subheader='Error Information for easy debugging'
+          />
+          <CardContent>
+            <Box sx={{ height: 400, position: 'relative' }}>
+              <h2>Something went wrong</h2>
+              <p>{` Please resolve: ${this.state.error.toString()} `}</p>
+            </Box>
+          </CardContent>
+        </Card>
       );
     }
 
