@@ -18,6 +18,8 @@ import AreaCharts from "../components/charts/AreaCharts";
 import BarChart from "../components/charts/BarCharts";
 import DoughnutChart from "../components/charts/DoughnutCharts";
 import LineChart from "../components/charts/LineCharts";
+import PieChart from "../components/charts/PieCharts";
+import PolarAreaChart from "../components/charts/PolarAreaCharts";
 
 const Dashboard = () => {
     const theme = useTheme();
@@ -97,6 +99,20 @@ const Dashboard = () => {
                         <Grid item lg={6} xs={12}>
                             <ErrorBoundary>
                                 <LineChart />
+                            </ErrorBoundary>
+                        </Grid>
+
+                        {/* Pie Chart section  */}
+                        <Grid item lg={6} xs={12}>
+                            <ErrorBoundary>
+                                <PieChart />
+                            </ErrorBoundary>
+                        </Grid>
+
+                        {/* Polaris Chart section  */}
+                        <Grid item lg={6} xs={12}>
+                            <ErrorBoundary>
+                                <PolarAreaChart />
                             </ErrorBoundary>
                         </Grid>
                     </Grid>
