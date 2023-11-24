@@ -8,6 +8,9 @@ import { theme as customTheme } from './theme';
 import ColorModeContext from './components/ColorModeContext';
 import Layout from './layout/Layout';
 import Dashboard from './pages/Dashboard'
+import About from './pages/About';
+import Contact from './pages/Contact';
+import Wallet from './pages/Wallet';
 
 
 const App = () => {
@@ -47,6 +50,9 @@ const App = () => {
                             <Layout>
                                 <Routes>
                                     <Route path='/' element={<Dashboard />} />
+                                    <Route path='/about' element={<About />} />
+                                    <Route path='/contact' element={<Contact />} />
+                                    <Route path='/wallet' element={<Wallet />} />
                                 </Routes>
                             </Layout>
                         </BrowserRouter>
